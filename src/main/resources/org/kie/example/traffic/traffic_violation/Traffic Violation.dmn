@@ -48,18 +48,20 @@
   </dmn:itemDefinition>
   <dmn:decision id="_0A0B6E26-9D7F-4BB0-BC86-B0CE41FFFBE3" name="Fine">
     <dmn:extensionElements/>
-    <dmn:variable id="_E51C4CAC-7DCE-4D64-A232-B375495EC89A" name="Fine"/>
+    <dmn:variable id="_E51C4CAC-7DCE-4D64-A232-B375495EC89A" name="Fine" typeRef="tFine"/>
     <dmn:informationRequirement id="_B986E359-7C28-4BED-8B43-92B8466690AD">
       <dmn:requiredInput href="#_F55B2988-EB7A-426F-993E-E4451EE23405"/>
     </dmn:informationRequirement>
   </dmn:decision>
   <dmn:inputData id="_F55B2988-EB7A-426F-993E-E4451EE23405" name="Violation">
     <dmn:extensionElements/>
-    <dmn:variable id="_B2609F5B-8ABE-4CCA-9801-83209C56A803" name="Violation"/>
+    <dmn:variable id="_B2609F5B-8ABE-4CCA-9801-83209C56A803" name="Violation" typeRef="tViolation"/>
   </dmn:inputData>
   <dmn:decision id="_81BAA5AA-6C75-44F6-819F-9C8349D24CDB" name="Should the driver be suspended?">
     <dmn:extensionElements/>
-    <dmn:variable id="_830B877F-5521-4524-ADB6-4D7C9E19F1FE" name="Should the driver be suspended?"/>
+    <dmn:question>Should the driver be suspended due to points on his driver license?</dmn:question>
+    <dmn:allowedAnswers>Yes,No</dmn:allowedAnswers>
+    <dmn:variable id="_830B877F-5521-4524-ADB6-4D7C9E19F1FE" name="Should the driver be suspended?" typeRef="string"/>
     <dmn:informationRequirement id="_E861E7F9-DD03-4609-B8B6-63039602F123">
       <dmn:requiredInput href="#_0D951E6E-B834-4C9A-A429-A6A1DD6191EB"/>
     </dmn:informationRequirement>
@@ -69,7 +71,7 @@
   </dmn:decision>
   <dmn:inputData id="_0D951E6E-B834-4C9A-A429-A6A1DD6191EB" name="Driver">
     <dmn:extensionElements/>
-    <dmn:variable id="_7E27EA55-4252-48A3-B722-9B28C1C6E694" name="Driver"/>
+    <dmn:variable id="_7E27EA55-4252-48A3-B722-9B28C1C6E694" name="Driver" typeRef="tDriver"/>
   </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
